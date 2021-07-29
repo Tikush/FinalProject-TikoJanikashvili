@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transfer View Controller-->
+        <scene sceneID="DaU-eB-kRy">
+            <objects>
+                <viewController storyboardIdentifier="TransferViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qx6-8k-sAm" customClass="TransferViewController" customModule="FinalProject_NewSpace_Tiko" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eja-fL-Ot8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="გადარიცხვა" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37u-gW-DVz">
+                                <rect key="frame" x="24" y="30" width="137" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="0.2156862745" green="0.31764705879999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_transfer" translatesAutoresizingMaskIntoConstraints="NO" id="QcO-X7-VuT">
+                                <rect key="frame" x="117.5" y="205" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="0zP-JW-9ak"/>
+                                    <constraint firstAttribute="width" constant="140" id="rPN-lF-rUa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="გადარიცხე ფული ნებისმიერი ბანკის ბარათზე 24/7" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PkO-r5-VhN">
+                                <rect key="frame" x="60" y="388" width="255" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1Dq-Nb-Sy5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.2156862745" green="0.31764705879999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nQ-Og-djs">
+                                <rect key="frame" x="24" y="600" width="327" height="47"/>
+                                <color key="backgroundColor" red="0.0" green="0.72549019609999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Me1-zW-w7p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="ახალი გადარიცხვა">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTranfer:" destination="qx6-8k-sAm" eventType="touchUpInside" id="XBB-8g-tJE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qUH-wi-rDq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qUH-wi-rDq" firstAttribute="trailing" secondItem="PkO-r5-VhN" secondAttribute="trailing" constant="60" id="0QS-PK-ubc"/>
+                            <constraint firstItem="QcO-X7-VuT" firstAttribute="centerX" secondItem="qUH-wi-rDq" secondAttribute="centerX" id="6Wz-6N-Ibs"/>
+                            <constraint firstItem="PkO-r5-VhN" firstAttribute="top" secondItem="QcO-X7-VuT" secondAttribute="bottom" constant="43" id="FKB-JD-WvL"/>
+                            <constraint firstItem="PkO-r5-VhN" firstAttribute="leading" secondItem="qUH-wi-rDq" secondAttribute="leading" constant="60" id="HtT-UR-2ZU"/>
+                            <constraint firstItem="37u-gW-DVz" firstAttribute="leading" secondItem="qUH-wi-rDq" secondAttribute="leading" constant="24" id="O7Z-q6-Qnq"/>
+                            <constraint firstItem="qUH-wi-rDq" firstAttribute="trailing" secondItem="3nQ-Og-djs" secondAttribute="trailing" constant="24" id="aZX-hF-LcN"/>
+                            <constraint firstItem="37u-gW-DVz" firstAttribute="top" secondItem="qUH-wi-rDq" secondAttribute="top" constant="30" id="pvp-bx-E0K"/>
+                            <constraint firstItem="3nQ-Og-djs" firstAttribute="leading" secondItem="qUH-wi-rDq" secondAttribute="leading" constant="24" id="tYD-E1-XgZ"/>
+                            <constraint firstItem="QcO-X7-VuT" firstAttribute="top" secondItem="qUH-wi-rDq" secondAttribute="top" constant="205" id="tp0-Cp-pN1"/>
+                            <constraint firstItem="qUH-wi-rDq" firstAttribute="bottom" secondItem="3nQ-Og-djs" secondAttribute="bottom" constant="20" id="z3d-ZF-hGw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="transferButton" destination="3nQ-Og-djs" id="RfF-fl-ZbQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ev-Yr-OqR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="103"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_transfer" width="500" height="500"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

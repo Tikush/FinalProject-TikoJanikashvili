@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transaction View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TransactionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="TransactionViewController" customModule="FinalProject_NewSpace_Tiko" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ტრანზაქციები" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xT7-6p-m9p">
+                                <rect key="frame" x="24" y="30" width="162.33333333333334" height="26.333333333333329"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="0.2156862745" green="0.31764705879999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CKD-yp-oU2">
+                                <rect key="frame" x="0.0" y="132" width="414" height="604"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jpe-di-Z85">
+                                <rect key="frame" x="24" y="82" width="366" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ძებნა" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uCO-At-dQm">
+                                        <rect key="frame" x="35" y="0.0" width="331" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="23c-tt-SUH">
+                                        <rect key="frame" x="10" y="12.666666666666671" width="15" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="A2p-ur-oUI"/>
+                                            <constraint firstAttribute="width" constant="15" id="o8D-Vf-vuw"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="uCO-At-dQm" secondAttribute="bottom" id="8UQ-YW-gN8"/>
+                                    <constraint firstItem="23c-tt-SUH" firstAttribute="leading" secondItem="Jpe-di-Z85" secondAttribute="leading" constant="10" id="Hdg-o8-rkl"/>
+                                    <constraint firstItem="uCO-At-dQm" firstAttribute="centerY" secondItem="Jpe-di-Z85" secondAttribute="centerY" id="UIh-Ro-y56"/>
+                                    <constraint firstItem="uCO-At-dQm" firstAttribute="top" secondItem="Jpe-di-Z85" secondAttribute="top" id="WH0-R6-9Zd"/>
+                                    <constraint firstAttribute="height" constant="40" id="l2K-5L-5E2"/>
+                                    <constraint firstItem="uCO-At-dQm" firstAttribute="leading" secondItem="23c-tt-SUH" secondAttribute="trailing" constant="10" id="tYh-2e-NW9"/>
+                                    <constraint firstAttribute="trailing" secondItem="uCO-At-dQm" secondAttribute="trailing" id="vPZ-mP-N12"/>
+                                    <constraint firstItem="23c-tt-SUH" firstAttribute="centerY" secondItem="uCO-At-dQm" secondAttribute="centerY" id="xnK-Be-Bp2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="CKD-yp-oU2" secondAttribute="bottom" id="9T9-kk-dpn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jpe-di-Z85" secondAttribute="trailing" constant="24" id="BMo-hj-ySm"/>
+                            <constraint firstItem="xT7-6p-m9p" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="CaF-YK-bXY"/>
+                            <constraint firstItem="Jpe-di-Z85" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="LYd-1Y-T9C"/>
+                            <constraint firstItem="Jpe-di-Z85" firstAttribute="top" secondItem="xT7-6p-m9p" secondAttribute="bottom" constant="25.666666666666671" id="Llu-xL-6ye"/>
+                            <constraint firstItem="CKD-yp-oU2" firstAttribute="top" secondItem="Jpe-di-Z85" secondAttribute="bottom" constant="10" id="fqT-ue-uT2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CKD-yp-oU2" secondAttribute="trailing" id="fvc-wg-59I"/>
+                            <constraint firstItem="CKD-yp-oU2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="h2g-sF-bNk"/>
+                            <constraint firstItem="xT7-6p-m9p" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="jGM-yy-zHQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchTextField" destination="uCO-At-dQm" id="h8G-HY-Xqj"/>
+                        <outlet property="searchView" destination="Jpe-di-Z85" id="n93-PE-iY2"/>
+                        <outlet property="tableIView" destination="CKD-yp-oU2" id="vbo-I7-Cdo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.956521739130437" y="93.750000000000014"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="search" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

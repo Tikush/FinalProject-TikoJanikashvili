@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Gifs" customModule="FinalProject_NewSpace_Tiko" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCG-jz-1f7" userLabel="Line View">
+                    <rect key="frame" x="186.66666666666666" y="21" width="41" height="5"/>
+                    <color key="backgroundColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="41" id="Dh9-v7-afJ"/>
+                        <constraint firstAttribute="height" constant="5" id="aCO-Ga-Dvp"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search  GIPHY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mh8-kK-haX">
+                    <rect key="frame" x="30" y="36" width="354" height="40"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="e0a-Gb-fkO"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                </textField>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kIl-To-527">
+                    <rect key="frame" x="0.0" y="86" width="414" height="650"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t2a-Eq-xvT">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kIl-To-527" secondAttribute="trailing" id="6MD-aV-m9m"/>
+                <constraint firstItem="rCG-jz-1f7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="21" id="8kT-Mq-93s"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Mh8-kK-haX" secondAttribute="trailing" constant="30" id="9eM-Nq-34B"/>
+                <constraint firstItem="kIl-To-527" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="CGb-Tv-xAZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="kIl-To-527" secondAttribute="bottom" id="Sxo-vp-vpB"/>
+                <constraint firstItem="Mh8-kK-haX" firstAttribute="top" secondItem="rCG-jz-1f7" secondAttribute="bottom" constant="10" id="a1V-fy-JMy"/>
+                <constraint firstItem="rCG-jz-1f7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="beG-JH-C1A"/>
+                <constraint firstItem="kIl-To-527" firstAttribute="top" secondItem="Mh8-kK-haX" secondAttribute="bottom" constant="10" id="kic-I3-jgA"/>
+                <constraint firstItem="Mh8-kK-haX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="rAY-oS-Sx6"/>
+            </constraints>
+            <connections>
+                <outlet property="collectionView" destination="kIl-To-527" id="Mo7-4J-QsA"/>
+                <outlet property="lineView" destination="rCG-jz-1f7" id="3M3-z0-w1A"/>
+                <outlet property="searchGif" destination="Mh8-kK-haX" id="m1i-hj-Tie"/>
+            </connections>
+            <point key="canvasLocation" x="182.60869565217394" y="75.815217391304358"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

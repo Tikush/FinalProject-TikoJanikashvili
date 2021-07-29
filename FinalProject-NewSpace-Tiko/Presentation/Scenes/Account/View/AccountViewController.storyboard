@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Account View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AccountViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="AccountViewController" customModule="FinalProject_NewSpace_Tiko" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbZ-f0-cvy">
+                                <rect key="frame" x="349" y="40" width="30" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="...">
+                                    <color key="titleColor" red="0.0" green="0.72549019609999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOut" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JWG-fg-YYB"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UN9-xL-Zqs" userLabel="Contact View">
+                                <rect key="frame" x="176.66666666666666" y="150" width="61" height="61"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account_contact" translatesAutoresizingMaskIntoConstraints="NO" id="xAw-Wz-Mcc">
+                                        <rect key="frame" x="10.333333333333343" y="10.666666666666657" width="40" height="40"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="8By-x8-WyI"/>
+                                    <constraint firstAttribute="height" constant="61" id="AfH-Dg-ybb"/>
+                                    <constraint firstAttribute="width" constant="61" id="KL7-Es-rRH"/>
+                                    <constraint firstItem="xAw-Wz-Mcc" firstAttribute="centerX" secondItem="UN9-xL-Zqs" secondAttribute="centerX" id="Kiq-yh-3lR"/>
+                                    <constraint firstItem="xAw-Wz-Mcc" firstAttribute="centerY" secondItem="UN9-xL-Zqs" secondAttribute="centerY" id="pEa-h4-MEb"/>
+                                    <constraint firstAttribute="width" constant="61" id="qSo-BS-K3x"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AfH-Dg-ybb"/>
+                                        <exclude reference="qSo-BS-K3x"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alg-hN-0WE">
+                                <rect key="frame" x="116" y="224" width="182" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="eQk-hk-Afi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="მომხმარებლის ანგარიში">
+                                    <color key="titleColor" red="0.0" green="0.72549019609999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down arrow" translatesAutoresizingMaskIntoConstraints="NO" id="3UZ-AX-HnP">
+                                <rect key="frame" x="304" y="228.66666666666666" width="15" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="DSP-Db-U0w"/>
+                                    <constraint firstAttribute="width" constant="15" id="P19-gQ-8Ie"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_account" translatesAutoresizingMaskIntoConstraints="NO" id="DLj-ub-jPF">
+                                <rect key="frame" x="0.0" y="478.66666666666674" width="414" height="180"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mad-dV-ZKa">
+                                <rect key="frame" x="116" y="280" width="36" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" red="0.2156862745" green="0.31764705879999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DLj-ub-jPF" secondAttribute="trailing" id="1qc-hX-0t1"/>
+                            <constraint firstItem="3UZ-AX-HnP" firstAttribute="trailing" secondItem="alg-hN-0WE" secondAttribute="trailing" constant="21" id="24j-Qt-Jpj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gbZ-f0-cvy" secondAttribute="trailing" constant="35" id="3D6-df-xn7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="DLj-ub-jPF" secondAttribute="bottom" constant="77.333333333333371" id="6cM-8d-rSp"/>
+                            <constraint firstItem="Mad-dV-ZKa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="116" id="82t-1t-VCF"/>
+                            <constraint firstItem="Mad-dV-ZKa" firstAttribute="top" secondItem="alg-hN-0WE" secondAttribute="bottom" constant="27" id="ETI-kA-BTv"/>
+                            <constraint firstItem="UN9-xL-Zqs" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Edm-ug-R9J"/>
+                            <constraint firstItem="gbZ-f0-cvy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="FVH-ps-T2y"/>
+                            <constraint firstItem="UN9-xL-Zqs" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="150" id="L5D-ki-Dgh"/>
+                            <constraint firstItem="3UZ-AX-HnP" firstAttribute="centerY" secondItem="alg-hN-0WE" secondAttribute="centerY" id="SV9-5v-bJb"/>
+                            <constraint firstItem="alg-hN-0WE" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="bOk-GC-ydv"/>
+                            <constraint firstItem="alg-hN-0WE" firstAttribute="top" secondItem="UN9-xL-Zqs" secondAttribute="bottom" constant="13" id="m3V-Qj-bPt"/>
+                            <constraint firstItem="DLj-ub-jPF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="y4H-oH-qHS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contactView" destination="UN9-xL-Zqs" id="UV0-24-NYM"/>
+                        <outlet property="usernameLabel" destination="Mad-dV-ZKa" id="RiZ-c4-P2J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="account_contact" width="40" height="40"/>
+        <image name="down arrow" width="20" height="20"/>
+        <image name="img_account" width="320" height="180"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

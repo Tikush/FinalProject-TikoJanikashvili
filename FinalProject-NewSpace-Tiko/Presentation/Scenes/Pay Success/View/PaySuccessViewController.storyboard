@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pay Success View Controller-->
+        <scene sceneID="pU4-Ge-kKN">
+            <objects>
+                <viewController storyboardIdentifier="PaySuccessViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LAE-of-e10" customClass="PaySuccessViewController" customModule="FinalProject_NewSpace_Tiko" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZZu-WJ-760">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vp-90-LVT" userLabel="Footer">
+                                <rect key="frame" x="24" y="600" width="327" height="47"/>
+                                <color key="backgroundColor" red="0.0" green="0.72549019607843135" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="yMl-Ct-5Rg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="მთავარი">
+                                    <color key="titleColor" red="0.95999999999999996" green="0.95999999999999996" blue="0.95999999999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onMain:" destination="LAE-of-e10" eventType="touchUpInside" id="VoJ-cg-Gxk"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_success" translatesAutoresizingMaskIntoConstraints="NO" id="olV-CK-054">
+                                <rect key="frame" x="133.5" y="210" width="108" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="8GU-Hv-h33"/>
+                                    <constraint firstAttribute="height" constant="108" id="hg8-0k-MGt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="გადახდა წარმატებით განხორციელდა" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4i-Dc-tYx">
+                                <rect key="frame" x="51.5" y="349" width="272" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" red="0.2156862745" green="0.31764705879999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0t1-Jd-ihX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0t1-Jd-ihX" firstAttribute="bottom" secondItem="2Vp-90-LVT" secondAttribute="bottom" constant="20" id="CQc-mr-ifU"/>
+                            <constraint firstItem="N4i-Dc-tYx" firstAttribute="width" secondItem="ZZu-WJ-760" secondAttribute="width" multiplier="0.725333" id="DVB-Yl-XNS"/>
+                            <constraint firstItem="N4i-Dc-tYx" firstAttribute="top" secondItem="olV-CK-054" secondAttribute="bottom" constant="31" id="IIm-lR-EyB"/>
+                            <constraint firstItem="olV-CK-054" firstAttribute="centerX" secondItem="0t1-Jd-ihX" secondAttribute="centerX" id="JF6-u4-F0d"/>
+                            <constraint firstItem="N4i-Dc-tYx" firstAttribute="centerX" secondItem="0t1-Jd-ihX" secondAttribute="centerX" id="dTS-n8-cb0"/>
+                            <constraint firstItem="0t1-Jd-ihX" firstAttribute="trailing" secondItem="2Vp-90-LVT" secondAttribute="trailing" constant="24" id="qED-Vu-Siw"/>
+                            <constraint firstItem="2Vp-90-LVT" firstAttribute="top" secondItem="N4i-Dc-tYx" secondAttribute="bottom" constant="234" id="qHU-g2-qEi"/>
+                            <constraint firstItem="2Vp-90-LVT" firstAttribute="leading" secondItem="0t1-Jd-ihX" secondAttribute="leading" constant="24" id="sz3-pF-g8m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="successButton" destination="2Vp-90-LVT" id="VTQ-K4-3vh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZQ-KB-hKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="67"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_success" width="78.5" height="78.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

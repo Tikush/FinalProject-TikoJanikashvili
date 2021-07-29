@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="306" id="KGk-i7-Jjw" customClass="TopMoneyCell" customModule="FinalProject_NewSpace_Tiko" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="510"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="510"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jqo-iS-1c3">
+                        <rect key="frame" x="70" y="70" width="180" height="180"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avi-gE-w2a">
+                                <rect key="frame" x="63.5" y="77.5" width="53.5" height="25.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" red="0.2156862745" green="0.31764705879999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="avi-gE-w2a" firstAttribute="centerX" secondItem="Jqo-iS-1c3" secondAttribute="centerX" id="4lX-el-Iuc"/>
+                            <constraint firstItem="avi-gE-w2a" firstAttribute="centerY" secondItem="Jqo-iS-1c3" secondAttribute="centerY" id="IpW-y3-Dda"/>
+                            <constraint firstAttribute="height" constant="180" id="ZbD-M4-N16"/>
+                            <constraint firstAttribute="width" constant="180" id="gle-GX-6eL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Jqo-iS-1c3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="70" id="PTm-wa-0ci"/>
+                    <constraint firstItem="Jqo-iS-1c3" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Ti4-xQ-bsN"/>
+                    <constraint firstAttribute="bottom" secondItem="Jqo-iS-1c3" secondAttribute="bottom" constant="70" id="w4l-HY-HV8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="KSh-L1-Wdx"/>
+            <connections>
+                <outlet property="monayLabel" destination="avi-gE-w2a" id="AfX-BD-Hhn"/>
+                <outlet property="monayView" destination="Jqo-iS-1c3" id="Z1u-qS-Czf"/>
+            </connections>
+            <point key="canvasLocation" x="-23.188405797101453" y="114.50892857142857"/>
+        </tableViewCell>
+    </objects>
+</document>

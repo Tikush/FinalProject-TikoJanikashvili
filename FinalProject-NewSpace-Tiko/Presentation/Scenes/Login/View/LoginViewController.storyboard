@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yDK-jU-Dbg">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="r41-Qc-Ubj">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yDK-jU-Dbg" customClass="LoginViewController" customModule="FinalProject_NewSpace_Tiko" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oiv-0v-cxT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="შესვლა" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iu-52-MSk">
+                                <rect key="frame" x="24" y="75" width="90" height="27.666666666666671"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="textColor" red="0.2156862745" green="0.31764705879999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1V-r9-1hd">
+                                <rect key="frame" x="24" y="367" width="366" height="47"/>
+                                <color key="backgroundColor" red="0.0" green="0.72549019609999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="eaf-3F-EaQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="შესვლა">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logIn" destination="yDK-jU-Dbg" eventType="touchUpInside" id="pJT-Re-xXU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0T-db-uZk" userLabel="Close Button">
+                                <rect key="frame" x="29" y="40" width="20" height="22"/>
+                                <state key="normal" image="ic_close"/>
+                                <connections>
+                                    <action selector="close:" destination="yDK-jU-Dbg" eventType="touchUpInside" id="DXG-iY-EC1"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RnI-az-k3y" userLabel="Line Bottom">
+                                <rect key="frame" x="24" y="342.33333333333331" width="366" height="0.66666666666668561"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.83529411760000005" blue="0.84705882349999995" alpha="0.7560199058" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.67000000000000004" id="98c-eh-G1N"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78r-dG-zIh" userLabel="Line Top">
+                                <rect key="frame" x="24" y="258.66666666666669" width="366" height="0.66666666666668561"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.90196078430000004" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.67000000000000004" id="6Oi-QH-3gU"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="მომხმარებელი" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9eO-fy-Otp" userLabel="Email TextField" customClass="CustomTextField" customModule="FinalProject_NewSpace_Tiko" customModuleProvider="target">
+                                <rect key="frame" x="24" y="222.66666666666666" width="366" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="3dr-9k-3gH"/>
+                                </constraints>
+                                <color key="textColor" red="0.2156862745" green="0.31764705879999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="მომხმარებელი"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeColorMail:" destination="yDK-jU-Dbg" eventType="touchDown" id="Ybf-Tq-llv"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="პაროლი" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5HY-av-KyO" userLabel="Password TextField" customClass="CustomTextField" customModule="FinalProject_NewSpace_Tiko" customModuleProvider="target">
+                                <rect key="frame" x="24" y="306.33333333333331" width="366" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="sEz-Aj-qE7"/>
+                                </constraints>
+                                <color key="textColor" red="0.2156862745" green="0.31764705879999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="პაროლი"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeColorPassword:" destination="yDK-jU-Dbg" eventType="touchDown" id="zoN-pX-h6z"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lem-0b-9Dm">
+                                <rect key="frame" x="361" y="304" width="29" height="29"/>
+                                <state key="normal" image="ic_closed_eye"/>
+                                <connections>
+                                    <action selector="showPassword:" destination="yDK-jU-Dbg" eventType="touchUpInside" id="x40-Mf-bAa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZcU-Nh-SGY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q0T-db-uZk" firstAttribute="leading" secondItem="ZcU-Nh-SGY" secondAttribute="leading" constant="29" id="3tc-Z5-KaU"/>
+                            <constraint firstItem="RnI-az-k3y" firstAttribute="top" secondItem="5HY-av-KyO" secondAttribute="bottom" constant="12" id="6mk-ta-NbP"/>
+                            <constraint firstItem="5HY-av-KyO" firstAttribute="top" secondItem="78r-dG-zIh" secondAttribute="bottom" constant="47" id="8jy-Nf-j9C"/>
+                            <constraint firstItem="ZcU-Nh-SGY" firstAttribute="trailing" secondItem="5HY-av-KyO" secondAttribute="trailing" constant="24" id="CWw-5f-EvK"/>
+                            <constraint firstItem="ZcU-Nh-SGY" firstAttribute="trailing" secondItem="U1V-r9-1hd" secondAttribute="trailing" constant="24" id="FAo-3Y-a9m"/>
+                            <constraint firstItem="ZcU-Nh-SGY" firstAttribute="trailing" secondItem="9eO-fy-Otp" secondAttribute="trailing" constant="24" id="HuI-bU-r8O"/>
+                            <constraint firstItem="9eO-fy-Otp" firstAttribute="leading" secondItem="ZcU-Nh-SGY" secondAttribute="leading" constant="24" id="KMr-cr-Fpy"/>
+                            <constraint firstItem="0iu-52-MSk" firstAttribute="top" secondItem="Q0T-db-uZk" secondAttribute="bottom" constant="13" id="KpY-w5-Kgd"/>
+                            <constraint firstItem="Q0T-db-uZk" firstAttribute="top" secondItem="ZcU-Nh-SGY" secondAttribute="top" constant="40" id="Q2k-Ys-yNb"/>
+                            <constraint firstItem="78r-dG-zIh" firstAttribute="leading" secondItem="Oiv-0v-cxT" secondAttribute="leading" constant="24" id="QH0-lt-x3O"/>
+                            <constraint firstItem="lem-0b-9Dm" firstAttribute="centerY" secondItem="5HY-av-KyO" secondAttribute="centerY" id="Txt-Sf-pny"/>
+                            <constraint firstItem="RnI-az-k3y" firstAttribute="leading" secondItem="Oiv-0v-cxT" secondAttribute="leading" constant="24" id="Z5D-ux-hJX"/>
+                            <constraint firstItem="U1V-r9-1hd" firstAttribute="leading" secondItem="ZcU-Nh-SGY" secondAttribute="leading" constant="24" id="aSR-HL-sgR"/>
+                            <constraint firstItem="78r-dG-zIh" firstAttribute="top" secondItem="9eO-fy-Otp" secondAttribute="bottom" constant="12" id="bnd-n2-EGd"/>
+                            <constraint firstAttribute="trailing" secondItem="78r-dG-zIh" secondAttribute="trailing" constant="24" id="eNy-EZ-te9"/>
+                            <constraint firstAttribute="trailing" secondItem="RnI-az-k3y" secondAttribute="trailing" constant="24" id="geY-Zi-hMv"/>
+                            <constraint firstItem="lem-0b-9Dm" firstAttribute="trailing" secondItem="5HY-av-KyO" secondAttribute="trailing" id="mxY-jd-GOZ"/>
+                            <constraint firstItem="U1V-r9-1hd" firstAttribute="top" secondItem="RnI-az-k3y" secondAttribute="bottom" constant="24" id="nKU-Of-EQS"/>
+                            <constraint firstItem="9eO-fy-Otp" firstAttribute="top" secondItem="0iu-52-MSk" secondAttribute="bottom" constant="120" id="pra-dq-ek3"/>
+                            <constraint firstItem="5HY-av-KyO" firstAttribute="leading" secondItem="ZcU-Nh-SGY" secondAttribute="leading" constant="24" id="wtJ-XI-PbX"/>
+                            <constraint firstItem="0iu-52-MSk" firstAttribute="leading" secondItem="ZcU-Nh-SGY" secondAttribute="leading" constant="24" id="ykh-SY-6a2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="eyeButton" destination="lem-0b-9Dm" id="7bU-zm-zR3"/>
+                        <outlet property="logInButton" destination="U1V-r9-1hd" id="0HJ-yB-PYX"/>
+                        <outlet property="mailLineView" destination="78r-dG-zIh" id="1Ki-BN-0C7"/>
+                        <outlet property="mailTextfield" destination="9eO-fy-Otp" id="bVd-eT-9QL"/>
+                        <outlet property="passwordLineView" destination="RnI-az-k3y" id="Ytw-RK-Ejn"/>
+                        <outlet property="passwordTextfield" destination="5HY-av-KyO" id="fMV-H3-er8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8Y-Ir-rgK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312" y="-47"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_close" width="20" height="20"/>
+        <image name="ic_closed_eye" width="29" height="29"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

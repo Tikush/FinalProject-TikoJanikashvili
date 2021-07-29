@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="Y6W-OH-hqX" customClass="WelcomeViewController" customModule="FinalProject_NewSpace_Tiko" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="51L-7p-4Ob">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="646"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="TsP-M3-abb">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="mdX-ud-7U1">
+                                <rect key="frame" x="128" y="646" width="158" height="28"/>
+                                <color key="pageIndicatorTintColor" red="0.3529411764705882" green="0.74117647058823533" blue="0.5490196078431373" alpha="0.25" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN3-1i-jEk">
+                                <rect key="frame" x="24" y="743" width="173" height="47"/>
+                                <color key="backgroundColor" red="0.0" green="0.72549019609999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="WjK-MU-iFm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="შესვლა">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YIn-uL-kEI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8H-mn-O2r">
+                                <rect key="frame" x="217" y="743" width="173" height="47"/>
+                                <color key="backgroundColor" red="0.0" green="0.72549019609999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="wXw-xR-aJY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="რეგისტრაცია">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="register:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WJC-f2-XRo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.21568627450980393" green="0.31764705882352939" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mdX-ud-7U1" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="2o2-Rb-PeP"/>
+                            <constraint firstItem="s8H-mn-O2r" firstAttribute="width" secondItem="SN3-1i-jEk" secondAttribute="width" id="4Pm-Oi-7hW"/>
+                            <constraint firstItem="51L-7p-4Ob" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="9kP-Ne-6LA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="s8H-mn-O2r" secondAttribute="trailing" constant="24" id="Jf5-UR-k1O"/>
+                            <constraint firstItem="51L-7p-4Ob" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="LHT-2L-Ayf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="s8H-mn-O2r" secondAttribute="bottom" constant="72" id="Pdo-aE-l7E"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="SN3-1i-jEk" secondAttribute="bottom" constant="72" id="U3d-B9-vxY"/>
+                            <constraint firstItem="SN3-1i-jEk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="afB-kT-yGm"/>
+                            <constraint firstItem="51L-7p-4Ob" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="gwE-07-ynh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="mdX-ud-7U1" secondAttribute="bottom" constant="188" id="jfY-jH-Ahc"/>
+                            <constraint firstItem="s8H-mn-O2r" firstAttribute="leading" secondItem="SN3-1i-jEk" secondAttribute="trailing" constant="20" id="pHN-Ti-LVS"/>
+                            <constraint firstItem="s8H-mn-O2r" firstAttribute="top" secondItem="mdX-ud-7U1" secondAttribute="bottom" constant="69" id="tG2-o0-wOR"/>
+                            <constraint firstItem="SN3-1i-jEk" firstAttribute="top" secondItem="mdX-ud-7U1" secondAttribute="bottom" constant="69" id="wkZ-bZ-8Ue"/>
+                            <constraint firstItem="mdX-ud-7U1" firstAttribute="top" secondItem="51L-7p-4Ob" secondAttribute="bottom" id="y54-SI-5K3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="51L-7p-4Ob" id="3be-gf-MXK"/>
+                        <outlet property="loginButton" destination="SN3-1i-jEk" id="VNw-TE-a5j"/>
+                        <outlet property="pageControl" destination="mdX-ud-7U1" id="c9f-tE-OOE"/>
+                        <outlet property="registerButton" destination="s8H-mn-O2r" id="RuQ-ke-HTo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NumbersView" customModule="FinalProject_NewSpace_Tiko" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EzO-I4-HoY" userLabel="Line View">
+                    <rect key="frame" x="186.66666666666666" y="12" width="41" height="5"/>
+                    <color key="backgroundColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="41" id="bQY-Hp-b5E"/>
+                        <constraint firstAttribute="height" constant="5" id="qnf-Mj-ox4"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KZW-aJ-Xzr">
+                    <rect key="frame" x="20" y="79" width="374" height="657"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Ru9-6y-YRc">
+                    <rect key="frame" x="20" y="38" width="374" height="36"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ნომრის არჩევა" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVi-iv-VKi">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <color key="textColor" red="0.2156862745" green="0.31764705879999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="სახელი" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgf-Yo-3dN">
+                            <rect key="frame" x="0.0" y="19" width="374" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KZW-aJ-Xzr" secondAttribute="trailing" constant="20" id="AsJ-dt-85M"/>
+                <constraint firstItem="KZW-aJ-Xzr" firstAttribute="top" secondItem="Ru9-6y-YRc" secondAttribute="bottom" constant="5" id="Oea-Cc-8Qf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ru9-6y-YRc" secondAttribute="trailing" constant="20" id="WCH-W5-o5S"/>
+                <constraint firstItem="EzO-I4-HoY" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="boI-tu-QPT"/>
+                <constraint firstItem="EzO-I4-HoY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="e4I-kX-d2I"/>
+                <constraint firstItem="Ru9-6y-YRc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="hei-cZ-zpR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="KZW-aJ-Xzr" secondAttribute="bottom" id="lrY-Pt-VLE"/>
+                <constraint firstItem="Ru9-6y-YRc" firstAttribute="top" secondItem="EzO-I4-HoY" secondAttribute="bottom" constant="21" id="n11-86-0vs"/>
+                <constraint firstItem="KZW-aJ-Xzr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="nhs-eL-WmT"/>
+            </constraints>
+            <connections>
+                <outlet property="fullNameLabel" destination="sgf-Yo-3dN" id="8E6-CZ-nCw"/>
+                <outlet property="lineView" destination="EzO-I4-HoY" id="Nkd-BH-5pa"/>
+                <outlet property="tableView" destination="KZW-aJ-Xzr" id="DD7-op-Tgn"/>
+            </connections>
+            <point key="canvasLocation" x="93" y="102"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

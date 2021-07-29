@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Invite View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="InviteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="InviteViewController" customModule="FinalProject_NewSpace_Tiko" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="invite-friends" translatesAutoresizingMaskIntoConstraints="NO" id="hv3-vL-Qzp">
+                                <rect key="frame" x="137" y="180" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="Dw4-Yj-4Yn"/>
+                                    <constraint firstAttribute="width" constant="140" id="Imo-vt-cdJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="გააზიარე მოწვევის კოდი" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVK-Dy-mci">
+                                <rect key="frame" x="125.33333333333333" y="354" width="163.66666666666669" height="15.666666666666686"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qUG-Eq-4Fj">
+                                <rect key="frame" x="24" y="384.66666666666669" width="366" height="47"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xnd-fc-F0Q">
+                                        <rect key="frame" x="60" y="9" width="236" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <state key="normal" title="Q1P28W6Z">
+                                            <color key="titleColor" red="0.0" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="copyText" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Qtc-Pe-Lse"/>
+                                            <action selector="onCopy:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="W4g-vJ-OmQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EG-qy-EY3">
+                                        <rect key="frame" x="316" y="12.666666666666629" width="20" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="B6G-na-2da"/>
+                                            <constraint firstAttribute="height" constant="22" id="tgG-C8-OZB"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_share"/>
+                                        <connections>
+                                            <action selector="share:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iTI-NG-cES"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7EG-qy-EY3" firstAttribute="centerY" secondItem="qUG-Eq-4Fj" secondAttribute="centerY" id="21e-Vc-JKo"/>
+                                    <constraint firstItem="Xnd-fc-F0Q" firstAttribute="leading" secondItem="qUG-Eq-4Fj" secondAttribute="leading" constant="60" id="EpU-y3-wY0"/>
+                                    <constraint firstAttribute="height" constant="47" id="It8-4u-nOm"/>
+                                    <constraint firstAttribute="trailing" secondItem="7EG-qy-EY3" secondAttribute="trailing" constant="30" id="aFP-8V-rwq"/>
+                                    <constraint firstItem="Xnd-fc-F0Q" firstAttribute="centerY" secondItem="qUG-Eq-4Fj" secondAttribute="centerY" id="eIb-Am-7Gq"/>
+                                    <constraint firstItem="7EG-qy-EY3" firstAttribute="leading" secondItem="Xnd-fc-F0Q" secondAttribute="trailing" constant="20" id="iMn-lM-pxN"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtN-nR-z29">
+                                <rect key="frame" x="24" y="458.66666666666669" width="366" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="kOG-Pg-s4y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <state key="normal" title="   გაუგზავნე პირადი მოწვევა" image="ic_invite_friends">
+                                    <color key="titleColor" red="0.0" green="0.72549019609999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="inviteFriend:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZOA-ek-PKc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqD-B9-Gxu">
+                                <rect key="frame" x="24" y="44" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="AUQ-iX-bt6"/>
+                                    <constraint firstAttribute="width" constant="20" id="nDe-0M-YTW"/>
+                                </constraints>
+                                <state key="normal" image="ic_close_white"/>
+                                <connections>
+                                    <action selector="close:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4ac-bK-V8p"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="მოიწვიე მეგობარი" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70i-e3-0KX">
+                                <rect key="frame" x="58.999999999999986" y="43.666666666666664" width="170.66666666666663" height="20.999999999999993"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="0.75430156379346025" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.21568627450980393" green="0.31764705882352939" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="70i-e3-0KX" firstAttribute="leading" secondItem="JqD-B9-Gxu" secondAttribute="trailing" constant="15" id="4Bo-EC-FAq"/>
+                            <constraint firstItem="JqD-B9-Gxu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="4Cd-eu-tpB"/>
+                            <constraint firstItem="qUG-Eq-4Fj" firstAttribute="top" secondItem="tVK-Dy-mci" secondAttribute="bottom" constant="15" id="7X1-ZD-Sxk"/>
+                            <constraint firstItem="wtN-nR-z29" firstAttribute="top" secondItem="qUG-Eq-4Fj" secondAttribute="bottom" constant="27" id="8vo-x5-Vve"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qUG-Eq-4Fj" secondAttribute="trailing" constant="24" id="EyR-1i-SfN"/>
+                            <constraint firstItem="wtN-nR-z29" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="HXh-Mo-gRc"/>
+                            <constraint firstItem="hv3-vL-Qzp" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="WFS-VV-3Sz"/>
+                            <constraint firstItem="70i-e3-0KX" firstAttribute="centerY" secondItem="JqD-B9-Gxu" secondAttribute="centerY" id="Zut-4t-ShD"/>
+                            <constraint firstItem="tVK-Dy-mci" firstAttribute="centerX" secondItem="hv3-vL-Qzp" secondAttribute="centerX" id="fHF-QF-VR5"/>
+                            <constraint firstItem="qUG-Eq-4Fj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="kI7-X8-bYQ"/>
+                            <constraint firstItem="tVK-Dy-mci" firstAttribute="top" secondItem="hv3-vL-Qzp" secondAttribute="bottom" constant="34" id="pBY-FT-f0z"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wtN-nR-z29" secondAttribute="trailing" constant="24" id="qiF-f3-cty"/>
+                            <constraint firstItem="hv3-vL-Qzp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="180" id="sej-ea-dY6"/>
+                            <constraint firstItem="JqD-B9-Gxu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="44" id="yKq-gy-f7o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backGroundView" destination="qUG-Eq-4Fj" id="WQ3-SI-tvr"/>
+                        <outlet property="copyCodeButton" destination="Xnd-fc-F0Q" id="YZG-Jy-MJB"/>
+                        <outlet property="inviteButton" destination="wtN-nR-z29" id="Cwh-eX-nX7"/>
+                        <outlet property="inviteImage" destination="hv3-vL-Qzp" id="ArH-Tv-z3I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="482.60869565217394" y="-79.076086956521749"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_close_white" width="29" height="29"/>
+        <image name="ic_invite_friends" width="20" height="20"/>
+        <image name="ic_share" width="20" height="20"/>
+        <image name="invite-friends" width="266.66665649414062" height="200"/>
+    </resources>
+</document>
